@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf Apps</title>
+
+    <script
+      src="https://kit.fontawesome.com/35c9366fab.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img src="assets/book-open-reader-solid.svg" class="logo-img" alt="" />
+        <h1 class="logo-title">Bookshelf Apps</h1>
+        <h2 id="pesan"></h2>
+      </div>
+    </header>
+
+    <div class="wrapper">
+      <div class="top">
+        <div class="form-container">
+          <h2 class="title">Tambah Buku Baru</h2>
+          <form id="formDataBuku" action="" method="post">
+            <div class="form-group">
+              <input type="text" name="judul" id="judul" placeholder="" />
+              <label for="judul">Judul</label>
+            </div>
+            <div class="row">
+              <div class="form-group">
+                <input type="text" name="penulis" id="penulis" placeholder="" />
+                <label for="penulis">Penulis</label>
+              </div>
+              <div class="form-group">
+                <input type="number" name="tahun" id="tahun" placeholder="" />
+                <label for="tahun">Tahun</label>
+              </div>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" name="isRead" id="isRead" placeholder="" />
+              <label for="isRead">Sudah selesai dibaca</label>
+            </div>
+            <button type="submit" class="submit-btn">Simpan</button>
+          </form>
+
+          <div class="jmlh-book">
+            <h3>Jumlah Buku:</h3>
+            <h4 id="total-books"></h4>
+          </div>
+        </div>
+
+        <div class="cari-container">
+          <h2 class="title">Cari Buku</h2>
+          <form id="formSearch" action="" method="post">
+            <div class="form-group">
+              <input
+                type="text"
+                name="pencarian"
+                id="pencarian"
+                placeholder=""
+              />
+              <label for="pencarian">Cari Buku</label>
+            </div>
+            <div class="form-search-bottom">
+              <button type="reset" class="reset-btn">
+                <i class="fa-regular fa-circle-stop fa-bounce"></i>
+              </button>
+              <button type="submit" class="cari-btn">
+                <i class="fa-solid fa-magnifying-glass fa-beat"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <div class="left-container">
+          <h2 class="title">Belum Selesai Dibaca</h2>
+          <div id="belumDibaca"></div>
+        </div>
+      </div>
+
+      <div class="right-container">
+        <h2 class="title">Sudah Selesai Dibaca</h2>
+        <div id="sudahDibaca"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/35c9366fab.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
